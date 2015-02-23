@@ -9,6 +9,35 @@ The Agile Scenario workgroup was chartered at the IT4IT Spring 2014 meeting (Ams
 
 * Identify specific changes to the IT4IT Reference Architecture as needed to better support Agile delivery
 
-* Contribute to positioning IT4IT specifically with reference to SAFe, Kanban, Scrum, and other Agile methods.
+* Contribute to positioning IT4IT specifically with reference to DevOps, SAFe, Kanban, Scrum, and other Agile methods.
 
 This document is the workgroup’s primary deliverable.
+
+== Version of the Reference Architecture
+
+This document is based on version [1.3] of the Reference Architecture.
+
+== Document Change History
+
+|=============================================================
+|Version|	Date    |Author(s)        |Status   |Remarks
+|0.1		|         |Charles T. Betz  |Draft	  |Initial draft
+|0.2	  |8/4/2014 |Charles T. Betz  |Draft	  |Updated draft
+|0.3	  |8/19/2014|Charles T. Betz  |Draft 	  |Updated draft
+|0.5    |9/27/2014|Charles T. Betz &
+                    Sue Desiderio	  |Draft	  |Combined
+                                               product/portfolio
+                                               backlog & DevOps
+                                               work
+|0.6    |10/5/2014|Charles T. Betz |	Draft	|Final edits
+|=============================================================
+
+The document should follow the process explained in more detail in the IT4IT Forum document
+
+== Contributors
+* Charles Betz
+* Sue Desiderio
+*	Phillippe Geneste
+* Lars Rossen
+* Vasu Sasikanth Sankhavaram
+* Karel van Zeeland
