@@ -53,6 +53,10 @@ Business strategies increasingly emphasize business experimentation, “Fail Fas
 
 There are many books and other resources available describing Agile and the reader is referred to the references, especially [2-4] as initial reading.
 
+image::resources/LeanEcosystem.jpg[]
+
+
+
 
 
 [bibliography]
