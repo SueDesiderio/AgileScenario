@@ -1,2 +1,4 @@
 # AgileScenario
 an experimental attempt at developing standards collateral using Github. 
+
+The content in this repository is (c) The Open Group, 2015
