@@ -45,3 +45,18 @@ The document should follow the process explained in more detail in the IT4IT For
 == Copyright
 Any material used, shared or developed from the contents of this document must include either the following graphical stamp or incorporate a similar statement attributing the content to the IT4IT Consortium.
 [to be inserted]
+
+== Business Context
+The Agile movement now represents many years of experience and theory and increasingly defines both the goals of information technology management as well as its execution.
+
+Business strategies increasingly emphasize business experimentation, “Fail Fast,” and “Think Big, Start Small” [1].  These strategies require corresponding IT agility: moving from large “batches” of project requirements to the software equivalent of Lean “single-piece flow.”
+
+There are many books and other resources available describing Agile and the reader is referred to the references, especially [2-4] as initial reading.
+
+
+
+[bibliography]
+.References
+- [[[2]]] Anderson, D.J. 'Kanban: Successful Evolutionary Change for your Technology Business'. 2010, Sequim, WA: Blue Hole Press.
+- [[[3]]] Humble, J. and Farley, D., 'Continuous delivery'. 2011, Boston: Addison-Wesley. xxxiii, 463 p.
+- [[[4]]] Reinertsen, D.G., 'The principles of product development flow: se...''
