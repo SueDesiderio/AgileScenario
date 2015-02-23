@@ -41,3 +41,7 @@ The document should follow the process explained in more detail in the IT4IT For
 * Lars Rossen
 * Vasu Sasikanth Sankhavaram
 * Karel van Zeeland
+
+== Copyright
+Any material used, shared or developed from the contents of this document must include either the following graphical stamp or incorporate a similar statement attributing the content to the IT4IT Consortium.
+[to be inserted]
