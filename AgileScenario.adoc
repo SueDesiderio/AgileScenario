@@ -1,5 +1,13 @@
 = IT4IT Agile Scenario
 
+// Push titles down one level.
+:leveloffset: 1
+
+include::01-Purpose.adoc[]
+
+// Return to normal title levels.
+:leveloffset: 0
+
 
 == Purpose of this document
 
@@ -69,7 +77,15 @@ _We are uncovering better ways of developing software by doing it and helping ot
 
 _That is, while there is value in the items on the right, we value the items on the left more._
 
-The Poppendiecks were early appliers of Lean principles to software development [13]. David Anderson has popularized the Toyota Production System term “Kanban” as a form of collaborative work management for software product teams, focused on self-organizing teams strongly concerned with flow and limiting work in process  [2]. Both the Poppendiecks and Anderson cite the influence of Don Reinertsen [4, 14]. The Phoenix Project is a notable exploration of the Lean, Agile, and DevOps themes [15]. 
+The Poppendiecks were early appliers of Lean principles to software development [13]. David Anderson has popularized the Toyota Production System term “Kanban” as a form of collaborative work management for software product teams, focused on self-organizing teams strongly concerned with flow and limiting work in process  [2]. Both the Poppendiecks and Anderson cite the influence of Don Reinertsen [4, 14]. The Phoenix Project is a notable exploration of the Lean, Agile, and DevOps themes [15].
+
+--insert figure 2--
+
+As seen in Figure 2, the traditional IT value chain has a number of challenges. Manual processes, silo walls between development and operations, and poorly integrated tools are some of the problems seen in the legacy methods to IT product development.
+
+“DevOps” (Figure 3) is the emerging industry response. Coined as a portmanteau representing “Development” and “Operations” (Patrick Debois is generally credited with originating the term), it represents the specific concerns of accelerating flow and software delivery from ideation through production, extending Agile philosophy from its traditional home in software development into operational domains. Fast feedback is a critical objective
+
+
 
 
 [bibliography]
