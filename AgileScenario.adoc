@@ -55,8 +55,21 @@ There are many books and other resources available describing Agile and the read
 
 image::resources/LeanEcosystem.jpg[]
 
+Figure 1. Lean, Agile, Devops, and related conceptual framing
 
+“Lean” is the overall philosophical framework, generally credited to Ohno and others at Toyota [5], with the name “Lean” first applied by Krafcik [6] and further Western development and popularization by Womack, Jones, Liker, and others [7-9]. Another key related source is the writings of Eli Goldratt [10, 11].
+The application of Lean philosophy to software engineering is closely related to the term “Agile,” as in “Agile Development.” The often-cited “Agile Manifesto” [12] states:
 
+_We are uncovering better ways of developing software by doing it and helping others do it. Through this work we have come to value:_
+
+* _Individuals and interactions over processes and tools_
+* _Working software over comprehensive documentation_
+* _Customer collaboration over contract negotiation_
+* _Responding to change over following a plan_
+
+_That is, while there is value in the items on the right, we value the items on the left more._
+
+The Poppendiecks were early appliers of Lean principles to software development [13]. David Anderson has popularized the Toyota Production System term “Kanban” as a form of collaborative work management for software product teams, focused on self-organizing teams strongly concerned with flow and limiting work in process  [2]. Both the Poppendiecks and Anderson cite the influence of Don Reinertsen [4, 14]. The Phoenix Project is a notable exploration of the Lean, Agile, and DevOps themes [15]. 
 
 
 [bibliography]
