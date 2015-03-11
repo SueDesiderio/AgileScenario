@@ -1,6 +1,3 @@
-= IT4IT Agile Scenario
-
-
 == Purpose of this document
 
 The Agile Scenario workgroup was chartered at the IT4IT Spring 2014 meeting (Amsterdam). Its scope is to:
