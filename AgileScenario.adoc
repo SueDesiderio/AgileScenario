@@ -9,18 +9,6 @@ include::01-Purpose.adoc[]
 :leveloffset: 0
 
 
-== Purpose of this document
-
-The Agile Scenario workgroup was chartered at the IT4IT Spring 2014 meeting (Amsterdam). Its scope is to:
-
-* Develop patterns, scenarios and perspectives demonstrating utility of IT4IT Reference Architecture for Lean and Agile delivery, including DevOps
-
-* Identify specific changes to the IT4IT Reference Architecture as needed to better support Agile delivery
-
-* Contribute to positioning IT4IT specifically with reference to DevOps, SAFe, Kanban, Scrum, and other Agile methods.
-
-This document is the workgroup’s primary deliverable.
-
 == Version of the Reference Architecture
 
 This document is based on version [1.3] of the Reference Architecture.
