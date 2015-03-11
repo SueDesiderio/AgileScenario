@@ -49,7 +49,7 @@ Business strategies increasingly emphasize business experimentation, “Fail Fas
 
 There are many books and other resources available describing Agile and the reader is referred to the references, especially [2-4] as initial reading.
 
-image::resources/LeanEcosystem.jpg[]
+image::images/LeanEcosystem.png[]
 
 Figure 1. Lean, Agile, Devops, and related conceptual framing
 
@@ -71,7 +71,7 @@ The Poppendiecks were early appliers of Lean principles to software development 
 
 As seen in Figure 2, the traditional IT value chain has a number of challenges. Manual processes, silo walls between development and operations, and poorly integrated tools are some of the problems seen in the legacy methods to IT product development.
 
-“DevOps” (Figure 3) is the emerging industry response. Coined as a portmanteau representing “Development” and “Operations” (Patrick Debois is generally credited with originating the term), it represents the specific concerns of accelerating flow and software delivery from ideation through production, extending Agile philosophy from its traditional home in software development into operational domains. Fast feedback is a critical objective
+“DevOps” (Figure 3) is the emerging industry response. Coined as a portmanteau representing “Development” and “Operations” (Patrick Debois is generally credited with originating the term), it represents the specific concerns of accelerating flow and software delivery from ideation through production, extending Agile philosophy from its traditional home in software development into operational domains. Fast feedback is a critical objective.
 
 
 
