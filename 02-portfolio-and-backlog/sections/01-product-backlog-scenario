@@ -1,0 +1,187 @@
+=== 4.1    Product backlog scenario
+
+
+The IT Organization wants to manage budget and efforts by portfolios. Within the portfolios, there are products (IT services) which are managed throughout the product (IT service) lifecycle. The strategic plans and roadmaps for the business are managed at the portfolio level (portfolio backlog), and at times are detailed at the product (IT service) level within the portfolios. All user requirements, enhancements, open defects, improvement opportunities, and IT demand are tracked at the product (IT service) level within a product backlog (program backlog) which exists throughout the lifecycle of the product
+(IT service).
+
+The IT organization wants the management of the portfolio backlogs (strategic demand/roadmaps) to be consistent across all portfolios. Likewise, the IT organization wants product (IT service) backlogs to be managed consistently across business units so staff who support various portfolios and products are using the same tools and processes thereby reducing total time/cost on projects since different project delivery staff could be assigned to any project/effort. Additionally, IT should never perform work to create/modify an IT service unless the business is aware and approves any related expenditures.
+
+As the business identifies needs, they work with IT to validate those business needs against the service portfolio to determine if the needs could be met by enhancing existing IT services, or if new IT services would be needed.  The business works with IT to add the business need (portfolio demand) as a portfolio backlog item for a particular business unit (portfolio).  Throughout the year, IT and the business collaborate to determine when funding is available to allow the initiation of work (project), at that time they will approve work to be performed for one or more portfolio backlog items.  The portfolio backlog items will be linked to specific products (IT services) by linking to requirements (product backlog items).  Once the project funding is approved, work will begin to create or modify an IT Service(s).
+
+=== 4.1.1    Requirements
+
+[width="100%",cols="50%,50%",]
+|=======================================================================
+|*ID* |*Goals*
+
+|G.01 |Utilize an integrated suite of tools and aligned processes for all efforts across the IT Organization regardless of approach (methodology) or customer (business unit) resulting in lower training costs and increased flexibility in staffing initiatives
+|G.02 |Manage and maintain authoritative repositories for key data
+elements within the IT Organization
+
+|G.03 |Visibility into planned, in progress, and completed work across the IT Organization
+
+|G.04 |Roadmaps are derived from the Portfolio Backlog and should exist for every portfolio with a focus on current fiscal year, view into last fiscal year, and view into next fiscal year
+
+|G.05 |A product backlog exists for each IT service throughout the life of that IT service
+|G.06 |The product backlog supports any software development methodology (ie. agile, waterfall, RUP)
+
+|G 07 |Product backlog contains all proposed changes to an IT Service (ie. user stories, enhancement requests, defects)
+
+|G.08 |Project delivery begins after funding has been approved by the applicable governing group
+
+|G.09 a| Ability to capture business needs in the portfolio backlog as a
+portfolio backlog item
+
+* Portfolio
+
+* Summary
+
+* Description
+
+* Status
+
+ * Priority
+
+* Planned fiscal year
+
+Rough order magnitude effort estimate
+
+|G.10 a|
+Ability to link a portfolio backlog item to one or more conceptual services
+
+* Portfolio backlog item
+
+Conceptual service
+
+|G.11 |
+Ability to link a portfolio backlog item to one or more product backlog items
+
+* Portfolio backlog item
+
+Product backlog item (requirement)
+
+|G.12 |
+Ability to link an IT project to a portfolio backlog item(s)
+IT project (scope agreement)
+Portfolio backlog item
+
+|=======================================================================
+
+=== 4.1.2    Process flow
+  
+image:../images/image010.png[image]
+ _ _
+
+*Process*
+
+*Requirements*
+
+*Record a business need in the Portfolio Backlog*
+
+REQ.01
+
+The business identifies needs during annual planning and records those efforts in the roadmap (portfolio backlog).? Annually, a budget is agreed to by the business and the roadmap is updated to reflect what work is planned for the current fiscal year and what work will be moved to future fiscal years.? Throughout the year, additional needs may be identified in which case the business works with IT to update the roadmap and potentially defer existing planned work.? The roadmap is kept in a priority order as funding may be changed throughout the year and additional work may be brought into a given year, or pushed to a future year.
+
+In some agile shops, annual planning may not occur and the portfolio backlog is updated as business identifies needs.? As work is planned, portfolio backlog items will be moved or linked to a program or team backlog and worked by the agile teams.? _
+*Roadmap items are validated against IT services
+
+REQ.02
+
+As business needs are identified, IT will work with the business to understand if an existing service(s) could be modified to meet the need, or if a new service(s) are needed to meet the need.? As new services are conceived, portfolio backlog items may be linked to the new services.
+
+*Map portfolio backlog items to product backlog items*
+
+REQ 03
+
+IT links portfolio backlog items to one or more product backlog items (user stories).? This allows traceability of product backlog items to the scope agreement when one or more portfolio backlog items are approved to work.
+
+*Approve portfolio backlog item to be worked*
+
+REQ 04
+
+The business reviews the roadmap (portfolio backlog) and approves funding for work to begin. The business may delegate funding authority to the product team and trust that the product team is focused on delivering business results.
+
+The roadmap items are linked to one or more products (IT services) and the corresponding product backlog items for those IT services.? The business approves a project, which is linked to the appropriate portfolio and product backlog items, to begin and with an initial budget.
+
+
+|=======================================================================
+|*Goal* |*Explanation*
+
+|*G.01* |Demand processes and management of the portfolio backlog are consistent across all methodologies and portfolios.
+
+|*G.02* |Single repository for the portfolio backlog is management and maintained for all portfolios.
+
+|*G03, G04* |A portfolio backlog exists for the key business portfolios and shows past roadmap items, planned roadmap items, and future roadmap items.?
+
+|*G 08* |Projects can only start if there is agreement from the business (IT contract) for scope and cost.?
+|=======================================================================
+
+=== 1.2.1     Essential Services supporting the scenario +
+
+image:../images/image011.png[image]
+
+
+4.1.2.2     Artifacts and the essential attributes
+
+image:../images/image012.png[image] +
+
+4.1.3    Detailed explanation on Reference Architecture usage. +
+
+image:../images/image013.png[image]
+
+4.1.4    Key attributes required by this scenario
+
+|=======================================================================
+|*Artifact* |*Attributes* |*Additional Information*
+
+|*Conceptual Service* |ID |Unique ID of conceptual service
+
+|* * |Name |This is the name easily identifying the service
+
+|* * |Description |This would represent the short description of a
+service
+
+|*Portfolio Backlog Item* |ID |Unique ID of portfolio backlog item
+
+|* * |Portfolio |This would be the portfolio name to which the backlog item is related
+
+|* * |Summary |This would represent the short description/title/summary of a given portfolio backlog item
+
+|* * |Description |This would be the full description, ideally supports rich text
+
+|* * |Backlog priority |This priority is unique across all backlog items for a single portfolio
+
+|* * |Backlog status |This status shows the state of the backlog item. Status would be used by both the business and IT to determine if it was an agreed roadmap item, proposed, in progress, etc.
+
+|* * |Proposed budget |This would be requirement, defect, or known error
+
+|* * |Fiscal Year |This would indicate in which fiscal year the roadmap item (portfolio backlog item) is planned.
+
+|* * |IT Service ID/Name |This needs to be at least the IT Service name, but ideally it would be the IT service ID and service name.
+
+|* * |Requirement ID(s) |This would be used to link a portfolio backlog item to one or more product backlog items (requirements)
+
+|* * |Scope Agreement ID |This would be used to link a portfolio backlog item to an Scope Agreement
+
+|*Requirement* |ID |Unique ID of requirement
+
+|* * |IT Service ID/Name |This needs to be at least the IT Service name, but ideally it would be the IT Service ID from CMDB and the service name
+
+|* * |Summary |This would represent the short description/title/summary of a given requirement
+
+|* * |Description |This would be the full description, ideally supports rich text
+
+|* * |Portfolio Backlog ID |This would be used to link a product backlog item to a portfolio backlog item
+
+|*Scope Agreement* |ID |Unique ID of a scope agreement
+
+|* * |Portfolio Backlog ID |This would be used to link an scope
+agreement to a portfolio backlog item
+
+|* * |IT Service ID/Name |This needs to be at least the IT Service name, but ideally it would be the IT Service ID and the service name
+
+|* * |Summary |This would represent the short description/title/summary
+of a given scope agreement
+
+|* * |Description |This would be the full description, ideally supports rich text
+|=======================================================================

@@ -1,0 +1,307 @@
+4.3    DevOps automation scenario
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+|=======================================================================
+|* * |*Strategy to Portfolio* |*Requirement to Deploy* |*Request to
+Fulfill* |*Detect to Correct*
+
+|*People* a|
+Establish common values and awareness
+
+Culture of systems engineering and collaboration
+
+ |Ops cross-pollination |Training to develop and support maximum
+automation |Dev on support frontline
+
+|*Process* a|
+Matrix organization and service aligned virtual teams supported by
+shared-services engineering
+
+Communication & Co-ordination? Awareness, Ongoing Feed-forward and
+Feedback
+
+Agile planning, Reduce WIP
+
+ |Delivery and deployment cadence |Service catalog |Incident and Change
+Management
+
+|*Technology* a|
+Lifecycle Management & Automation
+
+Planning, reporting
+
+metrics management (KPIs ? MTBF, MTRS)
+
+ a|
+Automate build, test
+
+ 
+
+ a|
+Automate release, deployment
+
+Infrastructure virtualization and provisioning automation
+
+Standardized services and components ? Common tools, modular design,
+systems thinking to enable reuse
+
+ |Automate monitoring, workload management
+|=======================================================================
+
+4.3.1    Scenario ?introduction
+
+The core DevOps scenario is described thus:
+
+*_Develop and deploy software functionality from development to
+operations in a maximally automated model, with sustainable velocity and
+demonstrating effective feedback._*
+
+There are many references cited in this document on the origins and
+current thinking around DevOps.
+
+A variety of sources [link:REF_32[32-36]] suggest some common
+architectural elements, named here as encountered:
+
+* Source Repository
+
+* Software Configuration Management
+
+* Continuous Integration and Build Management
+
+* Release Management
+
+* Build Console
+
+* Test Management
+
+* Package Repository
+
+* Deployment Engine
+
+* Deployment Console
+
+* Infrastructure Manager
+
+* Configuration Management Database
+
+* Event Management
+
+* Element Management
+
+* Business Process Management
+
+Note that these elements have not been rationalized; there are overlaps.
+
+In terms of scenarios, Eric Minick (formerly of UrbanCode, now of IBM)
+suggests a set of overlapping, cumulative DevOps scenarios
+[link:REF_33[33]] including:
+
+* Build software
+
+* Deploy software
+
+* System testing on deployment
+
+* Continuous delivery with monitoring and rollback
+
+We will adopt this set of scenarios.
+
+Note that this scenario does not include infrastructure as code.
+
+4.3.2    Process flows
+^^^^^^^^^^^^^^^^^^^^^^
+
+While the overall goal of DevOps is integrated software delivery and
+deployment, it is possible to break this down into a set of smaller
+building blocks which makes the problem more manageable.
+
+*It is critical in reading these scenarios to understand that they are
+intended to be run frequently and iteratively. Without that
+understanding, the critical Agile goals of fast feedback and maximizing
+information are not realized.*
+
+4.3.2.1     Build software
+++++++++++++++++++++++++++
+
+In this scenario software is constructed, tested, incorporated into a
+mainline trunk, and built into releasable packages on an ongoing basis.
+This is the basic Continuous Integration use case.
+
+image:../images/image018.png[image]
+
+Reading the diagram from left to right:
+
+1.    First, code is checked into the Service Development Component,
+which equates to Source Control and any additional services.
+
+2.    This triggers workflow to start the new build. This may be done
+immediately, or on a batch basis (i.e. the ?nightly build.?)
+
+3.    The Build Management component, performing Continuous Integration,
+runs tests (invoking the Test Management Component), including
+functional unit tests as well as external static analysis if called for.
+Test execution may result in defects being logged.
+
+4.    If the build succeeds, the built package is stored in the Release
+Design Component (aka package repository).
+
+4.3.2.2     Deploy software
++++++++++++++++++++++++++++
+
+In this scenario software is pulled from the package repository and
+applied to target environments in a repeatable
+
+image:../images/image019.png[image]
+
+1.    First, some event (automated, e.g. from a successful build, or
+human initiated) has initiated the deployment process.
+
+2.    A proposed change has been submitted to and approved by the Change
+Control component (this may be a standard change and approved in an
+automated manner)
+
+3.    The actual artifacts/package are pulled from the Release Design
+Component into the Deployment Management System(s) and applied to the
+Target System
+
+4.    The CMDB Component is updated as required with any new
+dependencies or other information originating from the package manifest.
+
+Notes:
+
+* This is the point at which OSLC or TOSCA [link:REF_37[37]]
+may come into play.
+
+4.3.2.3     System testing on deployment
+++++++++++++++++++++++++++++++++++++++++
+
+In this scenario system level tests are applied to the deployed
+packages.
+
+image:../images/image020.png[image] +
+
+1.    Per the last scenario, some event has resulted in the deployment
+of software to a target system.
+
+2.    The Test Management Component executes system-level, integration,
+and/or performance tests against the target system (which may be any
+environment).
+
+3.    Results (as in the first scenario) are recorded in the Defect
+Management Component.
+
+The reader may note that Incident Management is not included in this
+scenario; it is in the next one.
+
+ 
+
+4.3.2.4     Continuous delivery with monitoring and rollback
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+This scenario applies monitoring, event management, and automated
+rollback to the previous.
+
+image:../images/image021.png[image]
+
+1.    The software is now deployed into an environment with some level
+of operational monitoring, starting at the lowest ?service monitoring?
+level ? e.g., probes and log monitors that detect the basic operational
+status of the managed element.
+
+2.    The service monitoring component then raises events into an event
+management component (sometimes called a ?manager of managers.?)
+
+3.    The Event Management component draws upon CMDB dependencies and
+its own business rules to determine if an actual Incident should be
+declared.
+
+4.    The Incident is declared, and if severe enough, may warrant
+rollback of the change.
+
+5.    The proposed rollback of the Change is approved via the Change
+Control component
+
+6.    The Deployment Management system then reverses the change.
+
+7.    (Not shown) Root cause analysis and remediation then are presumed
+to occur.
+
+Notes:
+
+* There are various patterns for the roles that element
+monitors, event managers, and incident systems play, but a three-tier
+pattern is often seen.?
+
+* The term ?Service Monitoring Component? is a bit of a
+misnomer, as true service-awareness is not understood at the element or
+system level, but rather require the dependencies from the CMDB.
+
+ 
+
+4.3.2.5     DevOps interpreted as an ITIL? ?flow
+++++++++++++++++++++++++++++++++++++++++++++++++
+
+This is an auxiliary view of the end to end flow, interpreted as ITIL?
+?processes.
+
+_image:../images/image022.png[image]_
+
+4.3.2.6     ??? DevOps interpreted as a SAFe flow
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+This scenario will contrast with the previous scenario and represent the
+end to end delivery in SAFe terminology.
+
+_Note: If we bring in SAFE capabilities, we may need two capability
+?namespaces? ? need to discuss._
+
+4.3.2.7     DevOps and infrastructure-centric use cases
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+In scope?
+
+ 
+
+_ +
+ _
+_ _
+
+4.3.2.8     DevOps pipeline as an ITIL? ?flow with key data objects
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Key question: is there a ?Release? data object independent of the
+?Release Package? ? the ?Release? being metadata to the actual contents
+of the ?Release Package???
+
+_image:../images/image023.png[image]_
+
+_ +
+ _
+_ +
+ _
+*Capability*
+
+*Process*
+
+*Requirement*
+
+ 
+
+ 
+
+ 
+
+_ _
+
+_ _
+
+4.3.3    Automation Specification using the Reference Architecture
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+_ _
+
+4.4    Infrastructure as code / cloud scenario
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ 
